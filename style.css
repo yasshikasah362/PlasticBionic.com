@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    width: 100%;
+}
+#fp{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
+}
+#fp img{
+    /* opacity: 0; */
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+#fp h1{
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+   width: 100%;
+   height: 20%;
+   overflow: hidden;
+   z-index: 999;
+   color: #fff;
+   
+   /* background-color: aqua; */
+}
+#fp span{
+    display: inline-block;
+    font-size: 10vw;
+    -webkit-transform: translateY(200%);
+        -ms-transform: translateY(200%);
+            transform: translateY(200%);
+}
+#fp #cube{
+    position: absolute;
+    width: 20%;
+    height: 50%;  
+}
+#nav{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid #000;
+    z-index: 99999;
+}
+#nav .options{
+    height: 100%;
+    width: calc(100%/3);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; 
+position: relative;
+}
+#nav .options:nth-child(1){
+ padding: 0 2vw;
+ color: #fff;
+}
+.options .cover{
+    z-index: 1000;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+    color: #fff;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    padding: 0 2vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(0,0,0, 0.294);
+  
+}
+.options:nth-child(1) .cover{
+    background-color: #fff;
+    height: 3px;
+    color: #000;
+    padding: 0 2vw;
+
+}
+.cover span{
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none;
+}
+#home{
+    width: 100%;
+    height: 100vh;
+    background-color: #494949;
+    position: relative;
+}
+#second{
+    width: 100%;
+    height: 100vh;
+    background-color:rebeccapurple;
+    position: relative;
+}
+#third{
+    width: 100%;
+    height: 100vh;
+    background-color:yellow;
+    position: relative;
+}
+#fourth{
+    width: 100%;
+    height: 100vh;
+    background-color:darkred;
+    position: relative;
+}
+.container img{
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+.container #text{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    overflow: hidden;
+   
+}
+.container #text h1{
+    font-size: 11vw;
+    color: #fff;
+    white-space: nowrap;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container #text h1 span{
+   -webkit-transform: translateY(150%);
+       -ms-transform: translateY(150%);
+           transform: translateY(150%);
+   display: inline-block;
+
+}
+.container #text #line{
+    height: 9px;
+    width: 0%;
+    position: relative;
+    left: 0;
+    background-color: #fff;
+    -webkit-transition: all cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: all cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1);
+    /* animation: anim 1s cubic-bezier(0.19, 1, 0.22, 1) infinite both; */
+}
+@media(max-width: 500px){
+    .container #text{
+        max-width: 95%;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    }
+    .container #text h1{
+        font-size: 13vw;
+    }
+    .container #text #line{
+        height: 4px;
+    }
+    .options{
+        padding: initial;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    .options .cover{
+        padding: initial;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    
+}
